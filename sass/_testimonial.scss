@@ -1,0 +1,88 @@
+.blog {
+    margin: 0 auto 140px;
+    max-width: 1300px;
+    padding: 0 20px 0;
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+    }
+    &-item {
+        width: 340px;
+      height: 400px;
+      padding: 45px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      border-radius: 10px;
+      box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+    }
+    &-rating {
+        color: yellow;
+        font-size: 30px;
+    }
+    &-desc {
+        max-width: 320px;
+        margin: auto;
+        line-height: 1.4;
+        color: var(--text-color);
+        font-size: 16px;
+        p {
+            margin-bottom: 40px;
+            padding: 0;
+            text-align: center;
+        }
+    }
+    &-author {
+        position: absolute;
+        bottom: 35px;
+        &--img {
+          margin-bottom: 10px;
+          img {
+            position: absolute;
+            left: 50%;
+            bottom: 50%;
+            transform: translate(-50%, -50%);
+            width: 35px;
+            height: 35px;
+            border-radius: 100rem;
+            display: block;
+          }
+        }
+        &--content {
+          font-size: 16px;
+          color: var(--text-color);
+          font-weight: 400;
+          line-height: 1.4;
+        }
+      }
+}
+
+@media screen and (max-width: 1023.98px) {
+    .blog {
+        &-list {
+        display: grid;
+        justify-content: flex-start;
+        grid-auto-columns: 300px;
+        grid-auto-flow: column;
+        grid-gap: 1.5rem;
+        overflow: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        -webkit-overflow-scrolling: touch;
+        scroll-padding: 1rem;
+        grid-template-columns: unset;
+        }
+        &-list::-webkit-scrollbar {
+          display: none;
+          width: 0;
+        }
+        &-list > *{
+          scroll-snap-align: start;
+        }
+    }
+}

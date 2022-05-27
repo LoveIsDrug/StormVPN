@@ -1,0 +1,25 @@
+.GetApp {
+    background-color: rgba(245, 56, 56, 1);
+    width: 100%;
+    padding: 40px 60px;
+    text-align: center;
+    &-block {
+        max-width: 1300px;
+        margin: 0 auto;
+        text-align: center;
+        .heading {
+            color: white;
+            max-width: 650px;
+            margin: 0 auto 20px;
+        }
+        a {
+            font-size: 19px;
+        }
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .GetApp {
+        padding: 10px;
+    }
+}

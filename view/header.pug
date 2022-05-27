@@ -1,0 +1,36 @@
+header.header 
+    .navigation 
+        img(srcset="./image/logo.png" class="header-logo")
+        include ./menu
+        .auth
+            span.toggle Menu
+            a.btn.btn--secondary.auth-login(href="#") Login
+            a.btn.btn--primary.auth-signup(href="#") Signup
+    .header-main.container   
+        .header-content 
+            h3.heading.heading--huge.header-heading Mọi thứ trở nên dễ dàng hơn với LaslesVPN.
+            p.title.header-desc Cung cấp mạng cho mọi nhu cầu của bạn một cách dễ dàng và thú vị bằng cách sử dụng LaslesVPN khám phá các tính năng thú vị từ chúng tôi.
+            .header-actions
+                a.btn.btn--primary(href="#!") Download now
+                a.btn.btn--secondary(href="#!") Get started
+        .header-image
+            img(src="./image/Illustration 1.png" alt="")
+    .header-countdowns
+        .header-count  
+            .header-icon 
+                i.fa-solid.fa-user
+            .header-infor 
+                h4 90+
+                span Người dùng  
+        .header-count  
+            .header-icon 
+                i.fa-solid.fa-location-dot
+            .header-infor 
+                h4 30+
+                span Địa điểm
+        .header-count  
+            .header-icon 
+                i.fa-solid.fa-server
+            .header-infor 
+                h4 50+
+                span Quốc gia

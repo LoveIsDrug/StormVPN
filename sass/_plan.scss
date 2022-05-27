@@ -1,0 +1,88 @@
+.plan {
+  padding: 0 20px 140px;
+  max-width: 1300px;
+  margin: 0 auto;
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-top: 70px;
+  }
+  &-item {
+    width: 330px;
+    height: 760px;
+    border: 1px solid #dddd;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 80px 40px 50px 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    &:hover {
+      border: 1px solid var(--primary-text-color);
+    }
+  }
+  &-heading {
+    font-size: 25px;
+    margin: 30px 0;
+    font-weight: 500;
+  }
+
+  &-desc {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    &__row {
+      padding: 5px 0;
+      i {
+        color: #2fab73;
+      }
+    }
+  }
+  &-block {
+    position: absolute;
+    bottom: 50px;
+    font-size: 17px;
+    text-align: center;
+    &__price {
+      margin: 20px 0;
+      span {
+        font-weight: 400;
+        color: var(--text-color);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  .plan {
+    &-list {
+      display: grid;
+      justify-content: flex-start;
+      grid-auto-columns: 400px;
+      grid-auto-flow: column;
+      grid-gap: 1.5rem;
+      overflow: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      -webkit-overflow-scrolling: touch;
+      scroll-padding: 1rem;
+      padding: 20px;
+      grid-template-columns: unset;
+      margin-left: -20px;
+    }
+    &-list::-webkit-scrollbar {
+      display: none;
+      width: 0;
+    }
+    &-list > * {
+      scroll-snap-align: start;
+    }
+  }
+}

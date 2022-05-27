@@ -1,0 +1,211 @@
+.toggle {
+    display: block;
+    margin-left: 20px;
+}
+
+.navigation {
+    padding: 30px 20px 120px;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; 
+}
+
+.auth {
+    display: flex;
+    gap: 0 13px;
+    &-login {
+        line-height: 1.5;
+        padding: 10px 35px;
+    }
+}
+
+.menu {
+    margin-left: auto;
+    margin-right: 100px;
+    display: flex;
+    align-items: center;
+    gap: 0 38px;
+    list-style: none;
+    &-link {
+        color: inherit;
+        position: relative;
+        transition: all 0.2s linear;
+        display: block;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            height: 2px;
+            background-color: var(--primary-text-color);
+            width: 0;
+            transition: all .2s linear;
+        }
+        &:hover{
+            color: var(--primary-text-color);
+        }
+        &:hover::before{
+            content: "";
+            width: 100%;
+        }
+    }
+}
+
+.header {
+    padding-bottom: 140px;
+    &-main {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        max-width: 1300px;
+        margin: 0 auto;
+        position: relative;
+    }
+    &-content{
+        width: 100%;
+    }
+
+    &-heading {
+        margin: 18px 0 25px;
+    }
+
+    &-desc{
+        margin-bottom: 50px;
+    }
+
+    &-actions {
+        display:flex;
+        align-items: center;
+        gap: 0 30px;
+    }
+
+    &-countdowns {
+      max-width: 1140px;
+      height: 200px;
+      border-radius: 10px;
+      background-color: var(--color-bg);
+      margin: 100px auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    &-count{
+        display: flex;
+        align-items: center;
+        gap: 0 15px;
+    }
+    &-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 100rem;
+        background-color: var(--second-bg-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--primary-text-color);
+        font-size: 1.25em;
+    }
+    &-infor {
+        display:flex;
+        flex-direction:column;
+        h4 {
+            font-size: 1.4em;
+            color: var(--second-text-color);
+            font-weight: 700;
+            list-style: 30px;
+        }
+        span {
+            font-size: 1em;
+            font-weight: 400;
+            line-height: 30px;
+            color: var(--text-color);
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header {
+        &-content{
+            max-width: 600px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1023.98px) {
+    .auth {
+        margin-left: auto;
+    }
+    .menu{
+        margin: 0 auto;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 500px;
+        flex-direction: column;
+        background-color: #fff;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        z-index: 50;
+        align-items: stretch;
+        transition: all .2s linear;
+        transform: translateX(100%);
+        &.is-show{
+            transform: translateX(0);
+        }
+        &-link {
+            padding: 20px;
+        }
+    }
+    .header{
+        &-main {
+            flex-direction: column;
+        }
+    }
+    .toggle {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .header {
+        overflow: hidden;
+        &-heading {
+            font-size: 35px;
+        }
+        &-actions {
+            flex-direction: column;
+            gap: 20px 0;
+        }
+        &-icon {
+            width: 25px;
+            height: 25px;
+            border-radius: 100rem;
+            font-size: 10px;
+        }
+        &-infor {
+            display:flex;
+            flex-direction:column;
+            h4 {
+                font-size: 18px;
+                color: var(--second-text-color);
+                font-weight: 700;
+                list-style: 30px;
+            }
+            span {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 30px;
+                color: var(--text-color);
+            }
+        }
+    }
+    .auth-login {
+        padding: 9px 15px;
+    }
+}
+

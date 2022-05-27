@@ -1,0 +1,46 @@
+.world {
+    &-map {
+        img {
+            margin: 0 auto;
+        }
+    }
+    &-company {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        gap: 0 10px;
+        padding: 80px 20px;
+        margin-bottom: 140px;
+    }
+}
+
+@media screen and (max-width: 1023.98px) {
+    .world {
+        &-map {
+            img {
+                transform: scale(.85);
+            }
+        }
+        &-company{
+            transform: scale(.7);
+            padding: 40px 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .world {
+        &-map {
+            img {
+                transform: scale(.85);
+            }
+        }
+        &-company{
+            transform: scale(.3);
+            padding: 10px;
+        }
+    }
+}
+
+
